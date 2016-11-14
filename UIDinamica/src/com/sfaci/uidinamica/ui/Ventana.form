@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.sfaci.uidinamica.ui.Ventana">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <preferredSize width="420" height="300"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="ac0a0" class="javax.swing.JLabel" binding="lbEstado">
+        <constraints border-constraint="South"/>
+        <properties>
+          <text value="Label"/>
+        </properties>
+      </component>
+      <toolbar id="79f9c">
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="85633" class="javax.swing.JTextField" binding="tfNombreAlarma">
+            <constraints/>
+            <properties>
+              <columns value="0"/>
+              <maximumSize width="100" height="2147483647"/>
+            </properties>
+          </component>
+          <component id="19d76" class="javax.swing.JButton" binding="btAnadir">
+            <constraints/>
+            <properties>
+              <text value="Añadir"/>
+            </properties>
+          </component>
+        </children>
+      </toolbar>
+      <tabbedpane id="3ade9" binding="panelAlarmas">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>
