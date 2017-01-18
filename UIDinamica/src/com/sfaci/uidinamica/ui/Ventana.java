@@ -1,5 +1,8 @@
 package com.sfaci.uidinamica.ui;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,12 +14,13 @@ import java.awt.event.KeyListener;
  */
 public class Ventana implements ActionListener, KeyListener {
 
-
     private JPanel panel1;
     private JButton btAnadir;
     private JTabbedPane panelAlarmas;
     private JLabel lbEstado;
     private JTextField tfNombreAlarma;
+
+    private static final Logger logger = LogManager.getLogger(Ventana.class);
 
     public Ventana() {
         JFrame frame = new JFrame("Ventana");
@@ -37,6 +41,9 @@ public class Ventana implements ActionListener, KeyListener {
         tfNombreAlarma.setText("");
         tfNombreAlarma.requestFocus();
         panelAlarmas.revalidate();
+
+        logger.trace("Nueva Pestaña");
+
     }
 
     @Override
@@ -54,6 +61,7 @@ public class Ventana implements ActionListener, KeyListener {
 
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             btAnadir.doClick();
+            logger.trace("Pulsada tecla ENTER");
         }
     }
 }
