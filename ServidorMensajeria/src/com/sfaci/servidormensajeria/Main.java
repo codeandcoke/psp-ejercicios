@@ -17,7 +17,8 @@ public class Main {
                 Socket socket = servidor.aceptarConexion();
                 Cliente cliente = new Cliente(socket);
                 servidor.anadirCliente(cliente);
-                ConexionCliente conexionCliente = new ConexionCliente(cliente);
+                ConexionCliente conexionCliente =
+                        new ConexionCliente(servidor, cliente);
                 conexionCliente.start();
             }
         } catch (IOException ioe) {
