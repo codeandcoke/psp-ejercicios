@@ -92,10 +92,32 @@ public class Servidor {
      * Envia un mensaje a todos los clientes conectados
      * @param mensaje El mensaje
      */
-    public void enviarATodos(String mensaje) {
+    public void enviarATodos(String mensaje, String nickRemitente) {
 
         for (Cliente cliente : clientes) {
-            enviar(mensaje, cliente);
+            if (!cliente.getNick().equals(nickRemitente))
+                enviar(mensaje, cliente);
+        }
+    }
+
+    public void enviarNicksATodos() {
+
+        /*
+        Forma una cadena de texto con todos los nicks de los
+        clientes conectados separados por el carácter #
+         */
+        StringBuilder sb = new StringBuilder();
+        sb.append("/nicks");
+        for (Cliente cliente : clientes) {
+            sb.append("#");
+            sb.append(cliente.getNick());
+        }
+
+        /*
+        Envia la lista de nicks a todos los clientes conectados
+         */
+        for (Cliente cliente : clientes) {
+            enviar(sb.toString(), cliente);
         }
     }
 }

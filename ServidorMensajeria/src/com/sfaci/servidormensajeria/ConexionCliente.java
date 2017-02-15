@@ -18,13 +18,16 @@ public class ConexionCliente extends Thread {
     @Override
     public void run() {
 
-        servidor.enviar("Hola, bienvenido al mejor chat del mundo", cliente);
-
         try {
+            cliente.setNick(cliente.entrada.readLine());
+            servidor.enviarNicksATodos();
+            servidor.enviar("Hola, bienvenido al mejor chat del mundo", cliente);
+
             String mensaje = null;
             while (cliente.estaConectado()) {
                 mensaje = servidor.recibir(cliente);
-                servidor.enviarATodos(mensaje);
+                mensaje = cliente.getNick() + ">" + mensaje;
+                servidor.enviarATodos(mensaje, cliente.getNick());
             }
         } catch(IOException ioe) {
             ioe.printStackTrace();

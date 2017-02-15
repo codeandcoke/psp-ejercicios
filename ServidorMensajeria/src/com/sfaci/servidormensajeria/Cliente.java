@@ -16,6 +16,7 @@ import java.net.Socket;
  */
 public class Cliente {
 
+    private String nick;
     private Socket socket;
     PrintWriter salida;
     BufferedReader entrada;
@@ -39,5 +40,13 @@ public class Cliente {
 
     public boolean estaConectado() {
         return socket.isConnected();
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
     }
 }
