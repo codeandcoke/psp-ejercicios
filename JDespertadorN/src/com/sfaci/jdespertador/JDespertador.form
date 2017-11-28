@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.sfaci.jdespertador.JDespertador">
+  <grid id="27dc6" binding="panel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <preferredSize width="600" height="500"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="ddf3b" class="javax.swing.JLabel" binding="lbEstado">
+        <constraints border-constraint="South"/>
+        <properties>
+          <text value="Despertador"/>
+        </properties>
+      </component>
+      <grid id="ecea3" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="b6488" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <text value="Hora"/>
+            </properties>
+          </component>
+          <component id="a20dc" class="javax.swing.JTextField" binding="tfHora">
+            <constraints/>
+            <properties>
+              <preferredSize width="30" height="29"/>
+            </properties>
+          </component>
+          <component id="8edcf" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <text value="Minuto"/>
+            </properties>
+          </component>
+          <component id="d63a1" class="javax.swing.JTextField" binding="tfMinuto">
+            <constraints/>
+            <properties>
+              <preferredSize width="30" height="29"/>
+            </properties>
+          </component>
+          <component id="56955" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <text value="Mensaje"/>
+            </properties>
+          </component>
+          <component id="d2901" class="javax.swing.JTextField" binding="tfMensaje">
+            <constraints/>
+            <properties>
+              <preferredSize width="100" height="29"/>
+            </properties>
+          </component>
+          <component id="3d51e" class="javax.swing.JButton" binding="btProgramar">
+            <constraints/>
+            <properties>
+              <text value="Programar"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="fd5d7" binding="panelAlarmas" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+    </children>
+  </grid>
+</form>

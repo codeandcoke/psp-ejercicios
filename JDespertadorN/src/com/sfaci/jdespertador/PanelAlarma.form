@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.sfaci.jdespertador.PanelAlarma">
+  <grid id="27dc6" binding="panel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="473" height="55"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="8cb94" class="javax.swing.JLabel" binding="lbAlarma">
+        <constraints/>
+        <properties>
+          <text value="Alarma"/>
+        </properties>
+      </component>
+      <component id="6235e" class="javax.swing.JProgressBar" binding="pbProgreso">
+        <constraints/>
+        <properties/>
+      </component>
+      <component id="45890" class="javax.swing.JButton" binding="btCancelar">
+        <constraints/>
+        <properties>
+          <text value="Cancelar"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
