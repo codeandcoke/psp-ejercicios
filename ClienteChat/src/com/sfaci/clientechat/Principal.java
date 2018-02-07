@@ -7,8 +7,8 @@ public class Principal {
 
     public static void main(String args[]) {
 
+        ClienteChat view = new ClienteChat();
         ClienteChatController controller = new
-                ClienteChatController();
-        ClienteChat clienteChat = new ClienteChat();
+                ClienteChatController(view);
     }
 }
